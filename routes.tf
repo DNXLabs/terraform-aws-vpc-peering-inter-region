@@ -1,3 +1,5 @@
+#### REQUESTER = ORIGEM
+#### ACCEPTER  = DESTINO
 resource "aws_route" "accepter_public" {
   provider = aws.accepter
   count    = length(distinct(data.aws_route_table.accepter_public.*.route_table_id))

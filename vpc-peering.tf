@@ -1,3 +1,5 @@
+#### REQUESTER = ORIGEM
+#### ACCEPTER  = DESTINO
 resource "aws_vpc_peering_connection" "requester" {
   provider      = aws.requester
   peer_vpc_id   = var.accepter_vpc_id

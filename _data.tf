@@ -1,3 +1,5 @@
+#### REQUESTER = ORIGEM
+#### ACCEPTER  = DESTINO
 data "aws_vpc" "requester" {
   provider = aws.requester
   id = var.requester_vpc_id
@@ -14,7 +16,7 @@ data "aws_subnet_ids" "requester" {
 
   filter {
     name   = "tag:Scheme"
-    values = ["transit"]
+    values = [var.requester_subnet]
   }
 }
 
