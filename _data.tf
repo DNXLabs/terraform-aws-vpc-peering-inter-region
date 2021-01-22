@@ -1,5 +1,3 @@
-#### REQUESTER = ORIGEM
-#### ACCEPTER  = DESTINO
 data "aws_vpc" "requester" {
   provider  = aws.requester
   id        = var.requester_vpc_id

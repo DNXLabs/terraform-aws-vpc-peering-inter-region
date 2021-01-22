@@ -1,6 +1,3 @@
-#### REQUESTER = ORIGEM
-#### ACCEPTER  = DESTINO
-
 resource "aws_network_acl_rule" "in_accepter_public_from_requester" {
   provider       = aws.accepter
   count          = length(data.aws_subnet.requester.*.cidr_block)
