@@ -45,7 +45,7 @@ The following resources will be created:
 | requester\_owner\_id | Account ID of requester | `any` | n/a | yes |
 | requester\_vpc\_id | VPC ID of requester | `any` | n/a | yes |
 | requester\_region | Region of requester | `any` | n/a | yes |
-| requester\_subnet | Subnet of requester | `any` | n/a | yes |
+| requester\_subnet | Subnet of requester | `any` | "transit" | no |
 | serial | Number of this peering, distinct from others, to avoid conflict with NACL rule number | `number` | `0` | no |
 
 ## Outputs
