@@ -1,9 +1,9 @@
 # terraform-aws-vpc-peering
 
-[![Lint Status](https://github.com/DNXLabs/terraform-aws-vpc-peering/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-vpc-peering/actions)
-[![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-vpc-peering)](https://github.com/DNXLabs/terraform-aws-vpc-peering/blob/master/LICENSE)
+[![Lint Status](https://github.com/DNXLabs/terraform-aws-vpc-peering-inter-region/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-vpc-peering-inter-region/actions)
+[![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-vpc-peering-inter-region)](https://github.com/DNXLabs/terraform-aws-vpc-peering-inter-region/blob/master/LICENSE)
 
-This terraform module provide resources to manage Virtual Private Cloud (VPC) peering connections. A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
+This terraform module provide resources to manage Virtual Private Cloud (VPC) peering connections inter regions. A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
 
 The following resources will be created:
 
@@ -32,18 +32,21 @@ The following resources will be created:
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
-| aws.peer | n/a |
+| aws.accepter | n/a |
+| aws.requester | n/a |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| accepter\_owner\_id | Account ID of accepter | `any` | n/a | yes |
+| accepter\_vpc\_id | VPC ID of accepter | `any` | n/a | yes |
 | accepter\_region | Region of acccepter | `any` | n/a | yes |
-| peer\_owner\_id | Account ID of accepter | `any` | n/a | yes |
-| peer\_vpc\_id | VPC ID of accepter | `any` | n/a | yes |
+| requester\_owner\_id | Account ID of requester | `any` | n/a | yes |
+| requester\_vpc\_id | VPC ID of requester | `any` | n/a | yes |
+| requester\_region | Region of requester | `any` | n/a | yes |
+| requester\_subnet | Subnet of requester | `any` | n/a | yes |
 | serial | Number of this peering, distinct from others, to avoid conflict with NACL rule number | `number` | `0` | no |
-| vpc\_id | VPC ID of requester | `any` | n/a | yes |
 
 ## Outputs
 
@@ -57,4 +60,4 @@ Module managed by [DNX Solutions](https://github.com/DNXLabs).
 
 ## License
 
-Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/terraform-aws-vpc-peering/blob/master/LICENSE) for full details.
+Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/terraform-aws-vpc-peering-inter-region/blob/master/LICENSE) for full details.
