@@ -40,12 +40,12 @@ The following resources will be created:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | accepter\_owner\_id | Account ID of accepter | `any` | n/a | yes |
-| accepter\_vpc\_id | VPC ID of accepter | `any` | n/a | yes |
 | accepter\_region | Region of acccepter | `any` | n/a | yes |
+| accepter\_vpc\_id | VPC ID of accepter | `any` | n/a | yes |
 | requester\_owner\_id | Account ID of requester | `any` | n/a | yes |
-| requester\_vpc\_id | VPC ID of requester | `any` | n/a | yes |
 | requester\_region | Region of requester | `any` | n/a | yes |
-| requester\_subnet | Subnet of requester | `any` | "transit" | no |
+| requester\_subnet | Name of the requester subnet tag to be peered | `string` | `"transit"` | no |
+| requester\_vpc\_id | VPC ID of requester | `any` | n/a | yes |
 | serial | Number of this peering, distinct from others, to avoid conflict with NACL rule number | `number` | `0` | no |
 
 ## Outputs
